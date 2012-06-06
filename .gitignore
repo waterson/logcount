@@ -1,0 +1,9 @@
+Makefile
+config.h
+config.log
+config.status
+logcount_test
+stamp-h1
+*.o
+*.lo
+*.la
