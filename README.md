@@ -1,0 +1,4 @@
+logcount
+========
+
+Approximate unique counts.
