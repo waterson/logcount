@@ -134,3 +134,16 @@ logcount_value(const struct logcount *lc)
 
   return count ? (1 << (count / lc->nhash)) * roots[count % lc->nhash] : 0;
 }
+
+
+__attribute__((destructor))
+void
+logcount_destructor()
+{
+  while (root_cache) {
+    struct root_list *doomed = root_cache;
+    root_cache = root_cache->next;
+    free(doomed->roots);
+    free(doomed);
+  }
+}
