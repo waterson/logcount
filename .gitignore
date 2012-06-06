@@ -1,9 +1,13 @@
+*.la
+*.lo
+*.o
+.deps
+.libs
 Makefile
+autom4te.cache
 config.h
 config.log
 config.status
+libtool
 logcount_test
 stamp-h1
-*.o
-*.lo
-*.la
